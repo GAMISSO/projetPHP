@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+ --color-gris:#d5d4d4;
+ --color-blue:#2e2bc6;
+}
+body{
+    background-color: var(--color-gris);
+}
+
+.Container{
+    margin: 0 0 15px 15px ;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--color-blue);
+}
+
+header .headerRight{
+    display: flex;
+    align-items: center;
+    color: white;
+    /* background-color: black; */
+    gap: 15px;
+    
+}
+
+header .profilCompte{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+header .headerRight a{
+    text-decoration: none;
+    color: white;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.bg-wallet { background-color: #3b82f6; } /* bleu */
+.bg-balance { background-color: #22c55e; } /* vert */
+.bg-transfer { background-color: #06b6d4; } /* bleu clair */
+
+.card {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn i {
+  font-size: 1.1rem;
+}

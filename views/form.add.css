@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa;
+}
+.form-container {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.section-title {
+    color: #0d6efd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.account-number-generate {
+    display: flex;
+    align-items: center;
+}
+.account-number-generate .form-control {
+    flex: 1;
+    margin-right: 10px;
+}
+.divider {
+    margin: 25px 0;
+    border-top: 1px dashed #ddd;
+}
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#info-person{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#info-compte{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+}
