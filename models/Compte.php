@@ -1,6 +1,6 @@
 <?php 
 class Compte{
-    protected static int $nbre=0;
+    protected static int $nbre=4;
     protected int $id;
     protected \DateTime $dateCreation; 
     protected float $solde;
@@ -13,10 +13,10 @@ class Compte{
 
     //self ==> Compte
     //$this==> objet qui utilise la methode de la classe
-    public function  __construct(){   
-        // Compte::$nbre++;
-        // $this->numero="NUM_".Compte::$nbre;
-        // $this->solde=$solde;
+    public function  __construct(float $solde=0){   
+        Compte::$nbre++;
+        $this->numero="NUM_".(Compte::$nbre);
+        $this->solde=$solde;
     }
     /**
      * Get the value of id
@@ -109,4 +109,14 @@ class Compte{
     {
         $this->transactions[] = $transaction;
     }
+
+    public static function toCompte($row): Compte{
+        $compte=new Compte();
+        $compte->setId($row['id']);
+        $compte->setNumero($row['numero']);
+        // $compte->setDateCreation($row['dateCreation']);
+        $compte->setSolde($row['solde']);
+        return $compte; 
+    }
+    
 }

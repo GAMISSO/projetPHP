@@ -14,6 +14,11 @@ class CompteService{
     }
 
     public function addCompte(Compte $compte):void{
+        //$this->compteRepository->selectCompteByNum($compte->getNum());
         $this->compteRepository->insertCompte($compte);
+    }
+
+    public function SearchCompteByNum (string $numero):Compte|null{
+        return $this->compteRepository->selectCompteByNum($numero);
     }
 }

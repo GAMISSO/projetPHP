@@ -2,8 +2,8 @@
 class CompteCheque extends Compte {
     private const Frais=0.08;
 
-    public function __construct(float $solde){
-        parent::__construct($solde);
+    public function __construct(float $solde=0){
+        parent::__construct( $solde );
     }
 
     public  function retrait(Transaction $transaction){

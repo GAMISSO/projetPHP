@@ -9,9 +9,14 @@ class App{
                 switch ($choix) {
                     case '1':
                         $compte=CompteView::saisieCompte();
+                        if ($compteService->SearchCompteByNum($compte->getNumero())==null) {
+                            $compteService->addCompte( $compte);
+                            # code...
+                        }else{
+                            echo "le numéro existe déjà ";
+                        }
 
                         // if ($compteService->searchCompteByNum($compte->getNumero())==null) {
-                        //     $compteService->addCompte( $compte);
                         // }else{
                         //     echo "Le numero existe deja";
                         // }
